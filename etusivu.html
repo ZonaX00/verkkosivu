@@ -1,0 +1,149 @@
+<!DOCTYPE html> 
+<html lang="fi"> 
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>www-sivuston toteutus</title> 
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" as="script">
+
+</head> 
+
+<body> 
+    
+    <section class="header">
+        <nav>
+            <a href="etusivu.html"><img src="kuvat/Byreklogo.png" alt="Byrek-logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="etusivu.html">Etusivu</a></li>
+                    <li><a href="tuotteet.html">Tuotteet</a></li>
+                    <li><a href="ota-yhteytta.html">Ota yhteyttä</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+    <div class="text-box">
+        <h1>Kosovolaista <br>makua lautasellesi</h1>
+        <p>Byrek - suolainen leivonnainen.</p>
+        <a href="ota-yhteytta.html" class="hero-btn">Tilaa nyt</a>
+    </div>
+    </section>
+
+<!-- Esittely -->
+
+    <section class="esittely">
+        <h2>Lyhyt esittely</h2>
+        <p>Tervetuloa! Byrek on Balkanin alueella tunnettu ruokalaji, ja meiltä löydät huolella valmistettuja byrekejä, joissa yhdistyvät laadukkaat raaka-aineet ja rakkaus ruokaan. Jokainen byrekimme on tehty käsityönä. Tavoitteenamme on tarjota herkullisia ja täyttäviä vaihtoehtoja niin lihan ystäville kuin kasvisruokailijoillekin. Meillä tärkeää on tuoreus, maku ja tyytyväiset asiakkaat. Tilaa herkullista byrekia ja nauti aidosta Balkanin mausta.</p>
+    </section>
+
+<!-- Ruokatoimitus -->
+
+    <section class="ruokatoimitus">
+        <h2>Ruokatoimitus suoraan kotiovellesi!</h2>
+        <p>Nauti herkullisesta byrekistä helposti ja vaivattomasti! Tarjoamme kotiinkuljetuksen 5 km säteellä tai voit noutaa paikan päältä.</p>
+
+
+    </section>
+
+<!-- Asiakaspalautteet -->
+
+<section class="asiakaspalautteet">
+    <h2>Asiakaspalautteet</h2>
+    <div class="row">
+        <div class="asiakaspalautteet-col">
+            <img src="kuvat/asiakasikoni.png" alt="Asiakas 1, tyytyväinen asiakas">
+
+            <div>
+                <p>Byrekit olivat uskomattoman maukkaita ja juuri sopivan rapeita. Palvelu oli ystävällinen ja nopeaa. Tulen ehdottomasti tilaamaan uudelleen.</p>
+                <h3>Asiakas 1</h3>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+        </div>
+        <div class="asiakaspalautteet-col">
+            <img src="kuvat/asiakasikoni.png" alt="Asiakas 2, tyytyväinen asiakas">
+            <div>
+                <p>Erittäin tyytyväinen! Tilaukseni saapui nopeasti ja vielä lämpimänä. Kiitos ripeästä palvelusta ja herkullisista byrekeistä!</p>
+                <h3>Asiakas 2</h3>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+    <h2>Katso Menu</h2>
+    <a href="tuotteet.html" class="hero-btn">Tuotteet</a>
+</section>
+
+
+
+
+<!--JavaScript for Toggle Menu-->
+
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+
+   <!--Footer-->
+
+   <footer>
+    <div class="footer_main">
+
+        <div class="footer_tag">
+            <h2>Yhteystiedot</h2>
+            <p>+358 40 xxx xxxx</p>
+            <p>byrek@gmail.com</p>
+            <p>Tikkurilantie 13, 01300 Vantaa, Suomi</p>
+        </div>
+
+        <div class="footer_tag">
+            <h2>Pikalinkki</h2>
+        <p><a href="etusivu.html">Etusivu</a></p>
+        <p><a href="tuotteet.html">Tuotteet</a></p>
+        <p><a href="ota-yhteytta.html">Ota yhteyttä</a></p>
+        </div>
+
+        <div class="footer_tag">
+            <h2>Seuraa</h2>
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+
+        </div>
+
+    </div>
+
+    <p class="end">© 2025 Byrek. All Rights Reserved</p>
+</footer>
+
+
+</body> 
+</html>

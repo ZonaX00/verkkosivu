@@ -1,0 +1,166 @@
+<!DOCTYPE html> 
+<html lang="fi"> 
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www-sivuston toteutus</title> 
+        
+    <link rel="stylesheet" href="styles3.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head> 
+    
+<body>
+    <section class="header">
+        <nav>
+            <a href="etusivu.html"><img src="kuvat/Byrek.png" alt="Byrek-logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="etusivu.html">Etusivu</a></li>
+                    <li><a href="tuotteet.html">Tuotteet</a></li>
+                    <li><a href="ota-yhteytta.html">Ota yhteyttä</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+<!-- Yhteystiedott -->
+
+<section class="yhteystiedott">
+    <h2>Yhteystiedot</h2>
+    <p>Voit tehdä tilauksesi helposti verkossa täyttämällä tilauslomaketta tai puhelimitse! Jos sinulla on kysyttävää, voit ottaa meihin yhteyttä seuraavasti:
+    <p><strong>Puhelin:</strong> +358 40 xxx xxxx</p>
+    <p><strong>Sähköposti:</strong> byrek@gmail.com</p>
+    <p>Tarjoamme kotiinkuljetuksen 5 km säteellä tai vaihtoehtoisesti nouto paikan päältä.</p>
+</section>
+
+<!--order-->
+    <div class="order" id="Order">
+        <h2>Tilauslomake</h2>
+        <p>Lomakkeen avulla voi tehdä tilauksen joko kotiinkuljetuksella tai noudettavaksi. <b>Tilauksen jälkeen sinulle lähetetään lasku sähköpostiin. Heti maksun saatuamme otamme tilauksesi käsittelyyn. Voit maksaa myös mobilepay:lla.</b> </p>
+        <div class="order_main">
+
+            <form action="#">
+
+                <div class="input">
+                    <p>Etunimi</p>
+                    <input type="text" placeholder="etunimi">
+                </div>
+                <div class="input">
+                    <p>Sukunimi</p>
+                    <input type="text" placeholder="sukunimi">
+                </div>
+
+                <div class="input">
+                    <p>Sähköposti</p>
+                    <input type="email" placeholder="sähköposti">
+                </div>
+
+                <div class="input">
+                    <p>Puhelinnumero</p>
+                    <input type="tel" placeholder="puhelinnumero">
+                </div>
+
+                <div class="input">
+                    <p>Määrä</p>
+                    <input type="number" placeholder="esim. 1">
+                </div>
+                
+                <div class="input">
+                    <p>Valitse koko</p>
+                    <select required>
+                        <option value="" disabled selected>Valitse koko</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                    </select>
+                </div>
+
+                <div class="input">
+                    <p>Tuotteen nimi</p>
+                    <select required>
+                        <option value="" disabled selected>Valitse tuote</option>
+                        <option value="Fetabyrek">Fetabyrek</option>
+                        <option value="Pinaattibyrek">Pinaattibyrek</option>
+                        <option value="Klassikko byrek">Klassikko byrek</option>
+                    </select>
+                </div>
+
+                <div class="input">
+                    <p>Nouto tai Kotiinkuljetus</p>
+                    <input placeholder="esim. nouto">
+                </div>
+                <div class="input">
+                    <p>Milloin haluat vastaanottaa tilauksen?</p>
+                    <input type="date">
+                </div>
+
+                <div class="input">
+                    <p>Toimitusosoite</p>
+                    <input type="text" placeholder="Katuosoite">
+                    <input type="text" placeholder="Kaupunki">
+                    <input type="text" placeholder="Postinumero">
+                </div>
+                
+                <a href="#" class="order_btn">Tee tilaus</a>
+            </form>
+
+        </div>
+    </div>
+
+    </section>
+
+    <!--Footer-->
+
+    <footer>
+        <div class="footer_main">
+            <div class="footer_tag">
+                <h2>Yhteystiedot</h2>
+                <p>+358 40 xxx xxxx</p>
+                <p>byrek@gmail.com</p>
+                <p>Tikkurilantie 13, 01300 Vantaa, Suomi</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Pikalinkki</h2>
+                <p><a href="etusivu.html">Etusivu</a></p>
+                <p><a href="tuotteet.html">Tuotteet</a></p>
+                <p><a href="ota-yhteytta.html">Ota yhteyttä</a></p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Seuraa</h2>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    
+            </div>    
+        </div>
+
+        <p class="end">© 2025 Byrek. All Rights Reserved</p>
+    </footer>
+
+
+<!--JavaScript for Toggle Menu-->
+<script>
+
+    function showMenu(){
+        var navLinks = document.getElementById("navLinks");
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu(){
+        var navLinks = document.getElementById("navLinks");
+        navLinks.style.right = "-200px";
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelector(".fa-bars").addEventListener("click", showMenu);
+        document.querySelector(".fa-times").addEventListener("click", hideMenu);
+    });
+</script>
+
+</body>
+</html>

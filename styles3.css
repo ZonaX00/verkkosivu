@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 150px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #A17F63;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.nav-links ul li:hover {
+    color: #f44336;
+}
+
+nav .fa {
+    display: none;
+}
+
+@media(max-width: 700px) {
+    .text-box h1 {
+        font-size: 20px;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        background: #A17F63;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav .fa {
+        display: block;
+        color: black;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul {
+        padding: 30px;
+    }
+}
+
+/*----- Yhteystiedott -----*/
+
+.yhteystiedott {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.yhteystiedott h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.yhteystiedott p {
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media(max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+
+/*Order*/
+
+.order {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.order h1 {
+    font-size: 36px;
+    font-weight: 600;
+
+}
+
+.order p {
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.order .order_main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.order .order_main .order_image img {
+    width: 600px;
+}
+
+.order .order_main form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 10px;
+}
+
+.order .order_main form .input p {
+    line-height: 25px;
+}
+
+.order .order_main form .input {
+    margin: 5px;
+}
+
+.order .order_main form .input input {
+    width: 300px;
+    height: 35px;
+    padding: 0 10px;
+    border: 2px solid #cccccc;
+    background: #eeeeee;
+    outline: none;
+    border-radius: 3px;
+}
+
+.order .order_main form .input input:focus {
+    border: 2px solid #f44336;
+
+}
+
+.order .order_main form .order_btn {
+    padding: 10px 0;
+    background: #A17F63;
+    color: white;
+    width: 40%;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 10px;
+}
+
+.order button {
+    padding: 8px 16px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+    margin-bottom: 20px; /* Added margin-bottom for distance */
+}
+
+.btn {
+    display: inline-block;
+    background-color: #A17F63;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none; 
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #f44336;
+}
+
+.order .order_main form .order_btn:hover {
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+
+.order .order_main form .order_btn {
+    padding: 10px 0;
+    background: #A17F63;
+    color: white;
+    width: 40%;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px; /* Added margin-bottom for distance */
+}
+
+.order .order_main form .input select {
+    width: 300px;
+    height: 35px;
+    padding: 0 10px;
+    border: 2px solid #cccccc;
+    background: #eeeeee;
+    outline: none;
+    border-radius: 3px;
+}
+
+.order .order_main form .input select:focus {
+    border: 2px solid #f44336;
+}
+
+
+@media (max-width: 700px) {
+    .order {
+        width: 95%;
+        padding-top: 50px;
+    }
+
+    .order h1 {
+        font-size: 28px;
+    }
+
+    .order .order_main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .order .order_main .order_image img {
+        max-width: 300px;
+    }
+
+    .order .order_main form {
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .order .order_main form .input input {
+        height: 40px;
+    }
+
+    .order .order_main form .order_btn {
+        width: 100%;
+        padding: 12px 0;
+    }
+    .order .order_main form .input select {
+        width: 100%;
+        height: 40px;
+    }
+}
+
+/*footer*/
+
+footer{
+    width: 100%;
+    padding: 30px 0 0 20px;
+    background: #eeeeee;
+}
+
+footer .footer_main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+footer .footer_main .footer_tag{
+    text-align: center;
+}
+
+footer .footer_main .footer_tag h2{
+    color:#000;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+footer .footer_main .footer_tag p{
+    margin: 10px 0;
+}
+
+footer .footer_main .footer_tag i{
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+footer .footer_main .footer_tag i:hover{
+    color: #f44336;
+}
+
+footer .end {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+@media (max-width: 700px) {
+    footer .footer_main {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+        padding: 0 10px; /* Less padding */
+    }
+
+    footer .footer_main .footer_tag h2 {
+        font-size: 18px; /* Smaller title text */
+    }
+
+    footer .footer_main .footer_tag p {
+        font-size: 15px; /* Smaller title text */
+    }
+
+    footer .footer_main .footer_tag i {
+        font-size: 15px; /* Smaller icons */
+    }
+    footer .end {
+        font-size: 15px;
+        padding: 10px; /* Adjust footer end padding for mobile */
+    }
+}

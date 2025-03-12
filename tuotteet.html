@@ -1,0 +1,121 @@
+<!DOCTYPE html> 
+<html lang="fi"> 
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>www-sivuston toteutus tehtävä</title> 
+    
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head> 
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="etusivu.html"><img src="kuvat/Byrek.png" alt="Byrek-logo">
+            </a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="etusivu.html">Etusivu</a></li>
+                    <li><a href="tuotteet.html">Tuotteet</a></li>
+                    <li><a href="ota-yhteytta.html">Ota yhteyttä</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+<!-- Menu -->
+
+<section class="menu">
+    <h2>Menu</h2>
+</section>
+        
+<!--lista tuotteista-->
+
+<div class="card-container">
+    <div class="card">
+        <img src="kuvat/fetajuusto.png" alt="">
+        <div class="card-content">
+            <h3>Fetabyrek</h3>
+            <p>Hinta: L40€ M25€ S15€</p>
+            <a href="ota-yhteytta.html" class="btn">Tilaa nyt</a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="kuvat/pinaatti.png" alt="">
+        <div class="card-content">
+            <h3>Pinaattibyrek</h3>
+            <p>Hinta: L40€ M25€ S15€</p>
+            <a href="ota-yhteytta.html" class="btn">Tilaa nyt</a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="kuvat/jauheliha.png" alt="">
+        <div class="card-content">
+            <h3>Klassikko byrek</h3>
+            <h5>Jauheliha (nauta)</h5>
+            <p>Hinta: L40€ M25€ S15€</p>
+            <a href="ota-yhteytta.html" class="btn">Tilaa nyt</a>
+        </div> 
+    </div>
+       
+        
+</div>
+
+    </section>
+
+
+<!--JavaScript for Toggle Menu-->
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+   <!--Footer-->
+
+   <footer>
+    <div class="footer_main">
+
+        <div class="footer_tag">
+            <h2>Yhteystiedot</h2>
+            <p>+358 40 xxx xxxx</p>
+            <p>byrek@gmail.com</p>
+            <p>Tikkurilantie 13, 01300 Vantaa, Suomi</p>
+        </div>
+
+        <div class="footer_tag">
+            <h2>Pikalinkki</h2>
+        <p><a href="etusivu.html">Etusivu</a></p>
+        <p><a href="tuotteet.html">Tuotteet</a></p>
+        <p><a href="ota-yhteytta.html">Ota yhteyttä</a></p>
+        </div>
+
+        <div class="footer_tag">
+            <h2>Seuraa</h2>
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+
+        </div>
+
+    </div>
+
+    <p class="end">© 2025 Byrek. All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
